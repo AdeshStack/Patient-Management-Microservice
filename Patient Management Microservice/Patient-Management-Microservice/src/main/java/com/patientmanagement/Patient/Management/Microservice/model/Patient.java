@@ -23,6 +23,9 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
+
+    private String name;
+
     @NotNull
     @Email
     @Column(unique = true)
