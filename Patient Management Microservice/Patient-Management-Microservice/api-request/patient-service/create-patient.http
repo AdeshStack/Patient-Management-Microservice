@@ -1,0 +1,11 @@
+### Create Patient
+POST http://localhost:4000/patients
+Content-Type: application/json
+{
+  "name": "Adesh Kumar",
+  "email": "adesh.kumar@example.com",
+  "address": "123 Tech Park, Rajarhat, WB, India",
+  "dateOfBirth": "1990-05-15",
+  "registeredDate": "2025-11-05"
+}
+

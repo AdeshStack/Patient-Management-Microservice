@@ -1,0 +1,24 @@
+server:
+  port: 4000
+
+spring:
+  application:
+    name: patient-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/patient
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # Use 'none' if schema is already created
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+logging:
+  level:
+    root: info
