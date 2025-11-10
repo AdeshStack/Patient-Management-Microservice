@@ -6,7 +6,7 @@ spring:
     name: patient-service
 
   datasource:
-    url: jdbc:mysql://localhost:3306/patient
+    url: jdbc:mysql://host.docker.internal:3306/patient
     username: root
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver

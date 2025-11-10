@@ -1,11 +1,13 @@
 package com.patientmanagement.Patient.Management.Microservice.dto;
 
+import com.patientmanagement.Patient.Management.Microservice.dto.validators.createPatientValidationGroup;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+
 
 @Setter
 @Getter
@@ -24,6 +26,6 @@ public class PatientRequestDto {
     @NotBlank(message = "Date of birth is required")
     private String dateOfBirth;
 
-    @NotBlank(message = "Registered date is required")
+    @NotBlank(groups = createPatientValidationGroup.class   , message = "Registered date is required")
     private String registeredDate;
 }
