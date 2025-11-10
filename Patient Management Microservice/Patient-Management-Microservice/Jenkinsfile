@@ -24,12 +24,15 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                echo 'Building Docker image...'
-                bat "docker build -t %IMAGE_NAME%:%IMAGE_TAG% ./Patient Management Microservice/Patient-Management-Microservice"
-            }
-        }
+           stage('Build Docker Image') {
+                   steps {
+                       echo 'Building Docker image...'
+                       bat '''
+       docker build -t adeshprime17/patientservice:0.0.1 "./Patient Management Microservice/Patient-Management-Microservice"
+       '''
+
+                   }
+               }
 
         stage('Push to Docker Hub') {
             steps {
