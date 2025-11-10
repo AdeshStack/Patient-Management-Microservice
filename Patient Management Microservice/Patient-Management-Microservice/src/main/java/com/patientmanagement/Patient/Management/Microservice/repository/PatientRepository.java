@@ -11,4 +11,7 @@ public interface PatientRepository extends JpaRepository<Patient, UUID> {
 
     //add extra  method to check the exitsbyemail
     boolean existsByEmail(String email);
+
+    //checking a person has same email in the database
+    boolean existsByEmailAndIdNot(String email,UUID id);
 }
